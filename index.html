@@ -18,8 +18,8 @@
                 <a href="#" class="hide-desktop">
                     <img src="images/hamburger-menu.svg" alt="toggle-menu" class="menu" id="menu">
                 </a>
-                <ul class="show-desktop hide-desktop" id="nav">
-                    <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-mobile"><img src="images/exit.svg" alt="exit menu"></li>
                     <li><a href="#">home</a></li>
                     <li><a href="#">about</a></li>
                     <li><a href="#">store</a></li>
@@ -35,7 +35,7 @@
 
             <button>order</button>
 
-            <img src="images/scroll-icon.svg" alt="scroll icon">
+            <img src="images/scroll-icon.svg" alt="scroll icon" class="hide-mobile">
         </section>
 
         <section class="about">
@@ -70,19 +70,24 @@
 
     <div class="container">
         <section class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YgtTQipykww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YgtTQipykww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
             <p>Check out video about yoga mat history.</p>
         </section>
     </div>
 
     <div class="gray-container">
         <div class="container">
-            <img src="images/logo-white.svg" alt="logo-white">
-            <p>Shenzhen, Nanshan 518000<br>China</p>
-            <ul>
-                <li>Terms of Service</li>
-                <li>Privacy Policy</li>
-            </ul>           
+            <footer>
+                <img src="images/logo-white.svg" alt="logo-white" class="logo-white">
+                <p>Shenzhen, Nanshan 518000<br>China</p>
+                <ul>
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                </ul> 
+            </footer>          
         </div>
     </div>
 

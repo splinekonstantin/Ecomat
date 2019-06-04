@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-family: 'Spinnaker', sans-serif;
     color: #23536D;
+    min-width: 300px;
 }
 
 ul {
@@ -29,7 +30,7 @@ p, label, footer ul{
 
 /* header */
 .logo {
-    width: 102px;
+    width: 70px;
 }
 
 .hide-mobile {
@@ -46,10 +47,12 @@ header {
     display: flex;
     justify-content: space-between;
     padding: .8em 2em .3em 2em;
+    z-index: 3;
 }
 
 .menu {
-    margin-top: 80%;
+    width: 80%;
+    margin-top: 50%;
 }
 
 /* navigation within the header */
@@ -165,6 +168,7 @@ input {
     padding-bottom: 56.25%; 
     height: 0;
     margin-top: 2rem;
+    /* z-index: -1; */
 }
 .iframe-container iframe{
     position: absolute;
@@ -206,14 +210,15 @@ footer a{
 }
 
 /* media query */
-@media only screen and (max-width: 650px) {
-
+@media only screen and (min-width: 650px) {
     .logo {
-        width: 70px;
+        width: 102px;
     }
     .menu {
-        width: 80%;
-        margin-top: 50%;
+        width: 100%;
+        margin-top: 80%;
     }
-
+    .women {
+        width: 50%;
+    }
 }

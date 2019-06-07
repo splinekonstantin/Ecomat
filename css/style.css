@@ -17,20 +17,27 @@ ul {
     padding: 0;
 }
 
+p {
+    margin-top: 10%;
+}
+
 p, label, footer ul{
     font-size: .75em;
     line-height: 2em;
-   
+    /* margin-top: 5%; */
 }
 
 .container {
     text-align: center;
     padding: .8em 2em;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* header */
 .logo {
     width: 70px;
+    transition: 0.2s;
 }
 
 .hide-mobile {
@@ -38,16 +45,19 @@ p, label, footer ul{
 }
 
 header {
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky; */
+    position: fixed;
     top: 0;
-    /* position: fixed; */
     width: 100%;
     background: #fff;
+    
+    /* padding: .8em 2em .3em 2em; */
+    z-index: 3;
+}
+
+header div {
     display: flex;
     justify-content: space-between;
-    padding: .8em 2em .3em 2em;
-    z-index: 3;
 }
 
 .menu {
@@ -88,13 +98,21 @@ nav ul li a:hover {
 }
 
 /* section "hero" */
+.hero, .about {
+    margin: 15% 0;
+}
+
 .women {
+    padding: 1em;
     width: 70%;
-    margin: 2rem auto 1rem auto;
+    max-width: 682px;
+    max-height: 595px;
+    margin: 0 auto;
 }
 
 .hero p {
     font-size: 1em;
+    margin-bottom: 5%;
 }
 
 button {
@@ -107,14 +125,14 @@ button {
     font-size: 1.2em;
 }
 
-/* section "about" */
-.about {
-    margin: 2rem 0;
+.scroll {
+    margin: auto;
 }
 
+/* section "about" */
 .about ul li{
-    padding: 1rem 3rem;
-    margin: 1rem 0 2rem 0;
+    padding: 2rem 3rem;
+    margin: 10% 0;
     border-radius: 5px;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, .16);
 }
@@ -137,6 +155,10 @@ h2 {
 }
 
 /* section "store" */
+.store, .video, footer {
+    margin: 10% 0;
+}
+
 .blue-container {
     width: 100%;
     background-color: #85DEE2;
@@ -144,11 +166,9 @@ h2 {
 
 .store img {
     width: 75%;
-    margin-bottom: 1rem;
-}
-
-.store {
-    margin: 1rem;
+    max-width: 665px;
+    max-height: 335px;
+    margin-bottom: 10%;
 }
 
 input {
@@ -157,7 +177,7 @@ input {
     padding: 1em;
     border: none;
     border-radius: 5px;
-    margin: 2rem auto;
+    margin: 10% auto;
 }
 
 
@@ -168,7 +188,6 @@ input {
     padding-bottom: 56.25%; 
     height: 0;
     margin-top: 2rem;
-    /* z-index: -1; */
 }
 .iframe-container iframe{
     position: absolute;
@@ -176,10 +195,6 @@ input {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.video {
-    margin: 1rem;
 }
 
 /* footer */
@@ -192,7 +207,6 @@ input {
 footer {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    margin: 1em 0;
 }
 
 footer ul li{
@@ -211,6 +225,19 @@ footer a{
 
 /* media query */
 @media only screen and (min-width: 650px) {
+
+    p, label, footer ul{
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        width: 40%;
+    }
+
     .logo {
         width: 102px;
     }
@@ -220,5 +247,126 @@ footer a{
     }
     .women {
         width: 50%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+
+    .hero {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .women {
+        height: 50%;
+        margin: 0;
+    }
+    .hero div {
+        margin: auto;
+        text-align: right;
+    }
+
+    button {
+        margin-top: 10%;
+    }
+
+    .about ul {
+        display: flex;
+        justify-content: center;
+    }
+    .about ul li {
+        margin: 0 .5em;
+    }
+
+    .store {
+        display: flex;
+        flex: 1;
+        text-align: left;
+    }
+    .store img {
+        width: 50%;
+        height: 50%;
+        margin: auto 1em;   
+    }
+
+    input {
+        margin: 10% 0;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer div {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    p {
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .logo {
+        width: 200px;
+    } 
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    nav ul {
+        position: inherit;
+        padding: 0;
+        background: none;
+        width: auto;
+        height: auto;
+        /* display: flex; */
+    }
+
+    nav ul li {
+        float: left;
+        font-size: 1.2rem;
+        /* text-align: right; */
+    }
+
+    nav ul li a {
+        color: #23536D;
+        background-color: inherit;
+        /* padding: 0; */
+    }
+    
+    nav ul li a:hover {
+        background-color: inherit;
+    }
+
+    .hero {
+        margin: 20% 0 10% 0;
+    }
+
+    .about {
+        margin: 10% 0;
+    }
+
+    .scroll {
+        animation: move 1s infinite alternate;
+    }
+
+    @keyframes move {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-20px); 
+        }
+        
     }
 }

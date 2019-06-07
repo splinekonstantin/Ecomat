@@ -10,8 +10,9 @@
 <body>
     
     <header>
+        <div class="container">
         <a href="#">
-            <img src="images/logo.svg" alt="ecomat logo" class="logo">
+            <img src="images/logo.svg" alt="ecomat logo" class="logo" id="logo">
         </a>
             
         <nav>
@@ -19,25 +20,28 @@
                 <img src="images/hamburger-menu.svg" alt="toggle-menu" class="menu" id="menu">
             </a>
             <ul class="show-desktop hide-mobile" id="nav">
-                <li id="exit" class="exit-btn"><img src="images/exit.svg" alt="exit menu"></li>
+                <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
                 <li><a href="#">home</a></li>
                 <li><a href="#">about</a></li>
                 <li><a href="#">store</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
         </nav>
+        </div>
     </header>
 
     <div class="container">
         <section class="hero">
             <img src="images/woman.png" alt="women on a mat" class="women">
 
-            <p>Eco-friendly<br>Developed to bring joy<br>Your best foundatiion for yoga practice</p>
+            <div>
+                <p>Eco-friendly<br>Developed to bring joy<br>Your best foundatiion for yoga practice</p>
 
-            <button>order</button>
-
-            <img src="images/scroll-icon.svg" alt="scroll icon" class="hide-mobile">
+                <button>order</button>
+            </div>
         </section>
+        
+        <img src="images/scroll-icon.svg" alt="scroll icon" class="scroll hide-mobile">
 
         <section class="about">
             <ul>
@@ -82,8 +86,10 @@
     <div class="gray-container">
         <div class="container">
             <footer>
-                <img src="images/logo-white.svg" alt="logo-white" class="logo-white">
-                <p>Shenzhen, Nanshan 518000<br>China</p>
+                <div>
+                    <img src="images/logo-white.svg" alt="logo-white" class="logo-white">
+                    <p>Shenzhen, Nanshan 518000<br>China</p>
+                </div>
                 <ul>
                     <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">Privacy Policy</a></li>
@@ -92,5 +98,33 @@
         </div>
     </div>
 
+    <!-- <script>
+
+        
+    </script> -->
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e){
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+        exit.addEventListener('click', function(e){
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+        // if (screen.width > 1024) {
+        // window.onscroll = function() {scrollFunction()};
+        // }
+
+        // function scrollFunction() {
+        //         if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        //         document.getElementById("logo").style.width = "102px";
+        //         } 
+        //     }
+    </script>
 </body>
 </html>

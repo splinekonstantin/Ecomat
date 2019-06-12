@@ -9,41 +9,45 @@
 </head>
 <body>
     
-    <header>
+    <header id="header">
         <div class="container">
         <a href="#">
-            <img src="images/logo.svg" alt="ecomat logo" class="logo" id="logo">
+            <img src="images/logo.svg" alt="ecomat logo" class="logo" id="header-img">
         </a>
             
-        <nav>
+        <nav id="nav-bar">
             <a href="#" class="hide-desktop">
                 <img src="images/hamburger-menu.svg" alt="toggle-menu" class="menu" id="menu">
             </a>
             <ul class="show-desktop hide-mobile" id="nav">
-                <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
-                <li><a href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">store</a></li>
-                <li><a href="#">contact</a></li>
+                <li id="exit" class="exit-btn hide-desktop nav-link"><img src="images/exit.svg" alt="exit menu"></li>
+                <li><a href="#" class="nav-link">home</a></li>
+                <li><a href="#about" class="nav-link">about</a></li>
+                <li><a href="#store" class="nav-link">store</a></li>
+                <li><a href="#contacts" class="nav-link">contact</a></li>
             </ul>
         </nav>
         </div>
     </header>
 
     <div class="container">
-        <section class="hero">
-            <img src="images/woman.png" alt="women on a mat" class="women">
-
+        <section class="hero" id="hero">
             <div>
-                <p>Eco-friendly<br>Developed to bring joy<br>Your best foundatiion for yoga practice</p>
+                <img src="images/woman.png" alt="women on a mat" class="women">
 
-                <button>order</button>
+                <div>
+                    <p>Eco-friendly<br>Developed to bring joy<br>Your best foundatiion for yoga practice</p>
+
+                    <button class="btn">order</button>
+                </div>
             </div>
+            
+            <img src="images/scroll-icon.svg" alt="scroll icon" class="scroll hide-mobile">
         </section>
         
-        <img src="images/scroll-icon.svg" alt="scroll icon" class="scroll hide-mobile">
+        
 
-        <section class="about">
+        <section class="about" id="about">
             <ul>
                 <li>
                     <h2>BASIC MAT</h2>
@@ -59,14 +63,14 @@
 
     <div class="blue-container">
         <div class="container">
-            <section class="store">
+            <section class="store" id="store">
                     <img src="images/mats.png" alt="mats diffrent colors">
-                    <form action="" method="get">
+                    <form action="https://www.freecodecamp.com/email-submit" method="post" id="form">
                         <label for="email">Style your signature yoga mat<br>Choose your color<br>Add your name<br>Interested?<br>Leave your E-mail</label>
 
                         <input id="email" type="email" placeholder="Enter Your Email" required>
 
-                        <button>order</button>
+                        <input type="submit" class="btn" id="submit"></input>
 
                     </form>
             </section>
@@ -74,7 +78,7 @@
     </div>
 
     <div class="container">
-        <section class="video">
+        <section class="video" id="video">
             <div class="iframe-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/YgtTQipykww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -85,9 +89,10 @@
 
     <div class="gray-container">
         <div class="container">
-            <footer>
+            <footer id="contacts">
                 <div>
-                    <img src="images/logo-white.svg" alt="logo-white" class="logo-white">
+                    <a href="#"><img src="images/logo-white.svg" alt="logo-white" class="logo-white"></a>
+                    
                     <p>Shenzhen, Nanshan 518000<br>China</p>
                 </div>
                 <ul>
@@ -98,11 +103,9 @@
         </div>
     </div>
 
-    <!-- <script>
-
-        
-    </script> -->
+  
     <script>
+
         var menu = document.getElementById('menu');
         var nav = document.getElementById('nav');
         var exit = document.getElementById('exit');
@@ -116,15 +119,17 @@
             e.preventDefault();
         });
 
-        // if (screen.width > 1024) {
-        // window.onscroll = function() {scrollFunction()};
-        // }
 
-        // function scrollFunction() {
-        //         if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-        //         document.getElementById("logo").style.width = "102px";
-        //         } 
-        //     }
+      
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+                if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("header-img").style.width = "70px";
+                } 
+            }
+
+        
     </script>
 </body>
 </html>
